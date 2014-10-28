@@ -31,3 +31,7 @@ If you do wish for a DLL, project files and Makefiles for Visual Studio and ming
   any **alertable** Win32 function (e.g. `SleepEx`, `WaitForSingleObjectEx`).
 - Most of the timeout-based functions are not supported. It doesn't entirely make sense, as POSIX mandates
   the timer to be clocked against the POSIX system clock, which Windows doesn't even have.
+- Synchronization between different processes using shared-memory is not supported. I can't imagine
+  this would be a problem for most users.
+- Some of the extended thread options (priority class, user-specified stack addresses, etc) are not supported.
+
